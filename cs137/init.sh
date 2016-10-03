@@ -29,15 +29,37 @@ touch $make_path
 cat <<EOT >> $make_path
 CC=gcc
 filename=$question_name
-
 all: \$(filename).c; \$(CC) -std=c99 main.c \$(filename).c; ./a.out; rm a.out
 EOT
 
 cat <<EOT >> $main_path
 #include <stdio.h>
-
 int main(void) {
   printf("hello\n");
   return 0;
 }
 EOT
+
+echo "
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMM7MMMMMMMMMMMMMMMMMMM+7MMMMMMMMM
+MMMMMI$.,....,MMMMMMMMMMMMZ......, MMMMM
+MMMM,,....   ...MMMMMMMMM:...     .:MMMM
+MM7I,...        .,MMMMMM...        .,~MM
+MII,..           ., MMM~..          .,+M
+MI,...           ..,MZ7,..           .IM
+Z=,..             .,MM?,..           .. 
+I,...             ..~M~...           .,M
+I,...             ...?~,...887       .,$
+7,...  IZ         ..,M?,..8OIII:     .,7
+7,...?O8III       ...MI,..8O7III     .,I
+I,...OOOIII7.     ..,MI,,.8OOZIO    ..,?
+I,,. OOOIIII     ..,:MI7,..OOOO8.  ..,+M
+I+,..8OOO7II    ...,IM7II,..,$......,,?I
+II,,.~OOOOO8.  ...,,I77ZII.,.......,,IMM
++I7,,..OOOD.......,I7MMMZ?II~,,,,,,~I:,M
+MMI7,,...........,=I+M$?~,..IIIIIII?..,,
+MMMII,,,.......,,:IM$I~.,,,.............
+MMM+III,,,,,,,,.7I77=,,,,...............
+MMMMMMIIIII77IIII7I:.,,................." 
